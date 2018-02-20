@@ -1,10 +1,8 @@
 ## CALLING LIBRARIES TO BE USED
-
 library(dplyr)
 library(tidyr)
 
 ## SETTING WORKING DIRECTORY
-
 setwd("C:/Users/lenovo/Documents/MAO/Pega/Aprendizaje/R/Getting Cleaning Data/PeerGradedAssignment_Dataset/data")
 
 ## READING RAW DATA FROM SOURCE DIRECTORY IN PC, INTO WORKING DIRECTORY, WITH OBJECTS NAMED AFTER FILE NAMES
@@ -155,5 +153,4 @@ setwd("C:/Users/lenovo/Documents/MAO/Pega/Aprendizaje/R/Getting Cleaning Data/Pe
         second_data_final <- summarize_if(second_data_final, .predicate = function(x) is.numeric(x), .funs = funs(mean="mean"))
 
 ## EXPORTING FINAL SECOND DATA SET TO MY PC
-
 write.table(second_data_final, "~/MAO/Pega/Aprendizaje/R/Getting Cleaning Data/PeerGradedAssignment_Dataset/data/tidydataset.txt", row.names = FALSE)
